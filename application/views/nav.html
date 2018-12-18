@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        #nav {
+            height: 70px;
+        }
+        #nav:after {
+            content: "";
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background-color: rgba(33, 38, 49, 0.5);
+            z-index: 90;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: 0.2s all;
+            transition: 0.2s all;
+        }
+        #nav.shadow-active:after {
+            opacity: 1;
+            visibility: visible;
+        }
+        #nav-fixed {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 90;
+            background-color: #FFF;
+            -webkit-box-shadow: 0px -1px 0px 0px #eceef2 inset;
+            box-shadow: 0px -1px 0px 0px #eceef2 inset;
+        }
+        #nav-fixed.slide-down {
+            -webkit-animation: slide-down 0.3s;
+            animation: slide-down 0.3s;
+        }
+        #nav-fixed.slide-up {
+            -webkit-animation: slide-up 0.3s;
+            animation: slide-up 0.3s;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+        }
+        #nav .container {
+            position: relative;
+        }
+        /*----------------------------*\
+            logo
+        \*----------------------------*/
+        .nav-logo {
+            float:left;
+        }
+        .nav-logo .logo {
+            line-height: 70px;
+            display:inline-block;
+        }
+        .nav-logo .logo > img {
+            width: 100%;
+            max-height: 70px;
+        }
+    </style>
+</head>
+<body>
+<div id="nav-fixed">
+    <div class="container">
+        <!-- logo -->
+        <div class="nav-logo">
+            <a href="index.html" class="logo"><img src="./img/logo.png" alt=""></a>
+        </div>
+        <!-- /logo -->
+
+        <!-- nav -->
+        <ul class="nav-menu nav navbar-nav">
+            <li><a href="category.html">News</a></li>
+            <li><a href="category.html">Popular</a></li>
+            <li class="cat-1"><a href="category.html">Web Design</a></li>
+            <li class="cat-2"><a href="category.html">JavaScript</a></li>
+            <li class="cat-3"><a href="category.html">Css</a></li>
+            <li class="cat-4"><a href="category.html">Jquery</a></li>
+        </ul>
+        <!-- /nav -->
+
+        <!-- search & aside toggle -->
+        <div class="nav-btns">
+            <button class="aside-btn"><i class="fa fa-bars"></i></button>
+            <button class="search-btn"><i class="fa fa-search"></i></button>
+            <div class="search-form">
+                <input class="search-input" type="text" name="search" placeholder="Enter Your Search ...">
+                <button class="search-close"><i class="fa fa-times"></i></button>
+            </div>
+        </div>
+        <!-- /search & aside toggle -->
+    </div>
+</div>
+</body>
+</html>
